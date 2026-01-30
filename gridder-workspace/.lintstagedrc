@@ -1,0 +1,6 @@
+{
+  "**/*.{ts,html}": [
+    "ng lint --fix",
+    "prettier --write"
+  ]
+}
