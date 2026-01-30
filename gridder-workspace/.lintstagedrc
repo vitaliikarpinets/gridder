@@ -1,0 +1,6 @@
+{
+  "**/*.{ts,html,sass,json}": [
+    "npm run lint",
+    "npm run prettier"
+  ]
+}
