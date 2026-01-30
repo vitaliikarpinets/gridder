@@ -4,7 +4,7 @@ Gridder: Timed Grid Challenge
 ## Getting Started
 
 ### Prerequisites
-- Node.js (version 14.x, 16.x, or 18.x) and npm installed
+- Node.js (version ^20.19.0 || ^22.12.0 || ^24.0.0) and npm installed
 - Ensure that your Node.js version is compatible with the Angular version you are using.
 - Check the official Angular documentation for more details on version compatibility.
 
