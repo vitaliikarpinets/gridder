@@ -38,18 +38,11 @@
     "typescript-eslint": "8.50.1",
     "vitest": "^4.0.8"
   },
-  "_____lint-staged": {
-    "*.{ts,html,scss}": [
-      "prettier --write",
-      "ng lint --fix"
+  "lint-staged": {
+    "**/*.{ts,html,scss}": [
+      "ng lint --fix",
+      "prettier --write"
     ]
-  },
-  "___lint-staged": {
-    "linters": {
-      "./src/*.{ts,html,scss}": [
-        "prettier --write"
-      ]
-    }
   },
   "husky": {
     "hooks": {
