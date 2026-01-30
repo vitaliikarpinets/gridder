@@ -39,7 +39,7 @@
     "vitest": "^4.0.8"
   },
   "lint-staged": {
-    "**/*.{ts,html,scss}": [
+    "**/*.{ts,html,scss, json}": [
       "ng lint --fix",
       "prettier --write"
     ]
