@@ -29,5 +29,5 @@ jobs:
         working-directory: gridder-workspace
 
       - name: Build application
-        run: npm run build
+        run: npm run build -- --base-href /${{ github.event.repository.name }}/
         working-directory: gridder-workspace
