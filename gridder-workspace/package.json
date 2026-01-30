@@ -53,7 +53,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged --relative && nx build"
+      "pre-commit": "lint-staged --relative && ng build"
     }
   }
 }
