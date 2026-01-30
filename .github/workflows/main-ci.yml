@@ -2,8 +2,9 @@ name: Main – Build & Deploy
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+
+  workflow_dispatch:
 
 permissions:
   contents: read
