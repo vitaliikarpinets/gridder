@@ -1,0 +1,50 @@
+name: Main – Build & Deploy
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: 'gridder-workspace/package-lock.json'
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: gridder-workspace
+
+      - name: Lint
+        run: npm run lint:check
+        working-directory: gridder-workspace
+
+      - name: Build application
+        run: npm run build -- --base-href /${{ github.event.repository.name }}/
+        working-directory: gridder-workspace
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: gridder-workspace/dist/gridder/browser
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
