@@ -1,8 +1,8 @@
 <div
-  class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"
+  class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center sm:p-4"
 >
-  <div class="game max-w-2xl w-full">
-    <div class="text-center mb-8">
+  <div>
+    <div class="portrait-narrow text-center mb-8 hidden">
       <h1
         class="text-5xl font-bold text-white mb-2 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
       >
@@ -11,7 +11,7 @@
       <p class="text-slate-300">Click the highlighted cells before time runs out!</p>
     </div>
 
-    <div class="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 shadow-2xl border border-slate-700">
+    <div class="flex flex-col items-center justify-center gap-4">
       <gridder-game-controls />
       <gridder-game-scoreboard />
       <gridder-game-grid />
