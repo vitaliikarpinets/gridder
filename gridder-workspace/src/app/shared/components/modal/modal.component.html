@@ -1,0 +1,39 @@
+<div
+  class="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 animate-in fade-in duration-300"
+  (click)="dismiss()"
+  tabindex="0"
+>
+  <div
+    class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 border border-slate-700 animate-in zoom-in-95 duration-300"
+    (click)="preventPropagation($event)"
+    tabindex="1"
+  >
+    <div class="text-center">
+      <div class="mb-6">
+        <div class="text-6xl mb-4">{{ winner === 'Player' ? '🎉' : '💻' }}</div>
+        <h2 class="text-3xl font-bold text-white mb-2">{{ winner }} Wins!</h2>
+        <p class="text-slate-400">{{ winner === 'Player' ? 'Excellent reflexes!' : 'Better luck next time!' }}</p>
+      </div>
+      <div class="bg-slate-950/50 rounded-xl p-6 mb-6">
+        <div class="flex justify-around">
+          <div>
+            <div class="text-slate-400 text-sm mb-1">Player</div>
+            <div class="text-4xl font-bold text-green-400">{{ playerScore }}</div>
+          </div>
+          <div class="text-3xl text-slate-600 self-center">-</div>
+          <div>
+            <div class="text-slate-400 text-sm mb-1">Computer</div>
+            <div class="text-4xl font-bold text-red-400">{{ computerScore }}</div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer"
+        type="button"
+        (click)="restart()"
+      >
+        Play Again
+      </button>
+    </div>
+  </div>
+</div>

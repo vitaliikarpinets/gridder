@@ -1,0 +1,23 @@
+<div class="controls flex flex-wrap gap-4 items-end justify-center mb-6">
+  <div>
+    <label class="block text-slate-300 text-sm mb-2" for="timelimit">Time Limit (ms)</label>
+    <input
+      id="timelimit"
+      type="number"
+      class="bg-slate-900 text-white px-4 py-2 rounded-lg border border-slate-600 focus:border-blue-500 focus:outline-none w-32 disabled:opacity-50"
+      [min]="minTimeLimit"
+      [max]="maxTimeLimit"
+      [disabled]="isGameRunning()"
+      [(ngModel)]="modelTimeLimit"
+      (blur)="updateTimeLimit($event)"
+    />
+  </div>
+  <button
+    class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-slate-600 disabled:to-slate-700 text-white font-semibold px-8 py-2 rounded-lg transition-all duration-200 shadow-lg disabled:opacity-50 cursor-pointer"
+    type="button"
+    [disabled]="isGameRunning()"
+    (click)="initGame()"
+  >
+    Start
+  </button>
+</div>
