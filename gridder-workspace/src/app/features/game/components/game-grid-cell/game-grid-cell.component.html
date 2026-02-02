@@ -1,0 +1,12 @@
+<button
+  class="cell aspect-square rounded transition-all duration-200"
+  [ngClass]="{
+    'cursor-pointer': isGameRunning(),
+    'bg-blue-500': cellState === cellStates.Idle,
+    'bg-yellow-400 shadow-lg shadow-yellow-500/50 scale-110': cellState === cellStates.Active,
+    'bg-green-500': cellState === cellStates.Success,
+    'bg-red-500': cellState === cellStates.Failed,
+  }"
+  type="button"
+  (click)="clickCell()"
+></button>
