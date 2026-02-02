@@ -1,11 +1,10 @@
 import { Component, ChangeDetectionStrategy, inject, computed } from '@angular/core';
-import { GameService } from '../../core/services/game.service';
-import { ModalComponent } from '../../shared/components/modal/modal.component';
-import { GameStateService } from '../../core/services/game-state.service';
+import { GameService, GameStateService } from '@services';
+import { GameStatus } from '@models';
+import { ModalComponent } from '@shared/components';
 import { GameControlsComponent } from './components/game-controls/game-controls.component';
 import { GameScoreboardComponent } from './components/game-scoreboard/game-scoreboard.component';
 import { GameGridComponent } from './components/game-grid/game-grid.component';
-import { GameStatus } from '../../core/models/game.model';
 
 @Component({
   selector: 'gridder-game',

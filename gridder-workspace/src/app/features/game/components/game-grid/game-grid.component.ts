@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { GameStateService } from '../../../../core/services/game-state.service';
+import { GameStateService } from '@services';
 import { GameGridCellComponent } from '../game-grid-cell/game-grid-cell.component';
 
 @Component({
