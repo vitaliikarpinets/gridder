@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { GameStateService } from '@services';
+import { GAME_CONFIG } from '@tokens';
 import { GameGridCellComponent } from '../game-grid-cell/game-grid-cell.component';
 
 @Component({
@@ -11,7 +12,11 @@ import { GameGridCellComponent } from '../game-grid-cell/game-grid-cell.componen
   imports: [GameGridCellComponent],
 })
 export class GameGridComponent {
+  readonly #gameConfig = inject(GAME_CONFIG);
   readonly #state = inject(GameStateService);
 
   readonly cells = this.#state.cells.asReadonly();
+
+  readonly gridColumns = this.#gameConfig.gridColumns;
+  readonly gridRows = this.#gameConfig.gridRows;
 }

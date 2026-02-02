@@ -1,4 +1,8 @@
-<div class="grid grid-cols-10 gap-1 bg-slate-950 p-2 rounded-xl">
+<div
+  class="grid gap-1 bg-slate-950 p-2 rounded-xl aspect-square"
+  [style.--grid-columns]="gridColumns"
+  [style.--grid-rows]="gridRows"
+>
   @for (cell of cells(); track cell.id) {
     <gridder-game-grid-cell class="contents" [cellId]="cell.id" [cellState]="cell.state" />
   }
