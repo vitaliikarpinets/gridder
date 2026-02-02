@@ -1,6 +1,5 @@
 import { computed, Injectable, signal } from '@angular/core';
-import { Cell } from '../models/cell.model';
-import { GameStatus, GameWinner } from '../models/game.model';
+import { Cell, GameStatus, GameWinner } from '@models';
 
 //todo add .env file ❗❗❗
 // const GRID_SIZE = 100;

@@ -1,8 +1,7 @@
 import { Injectable, inject } from '@angular/core';
-import { Cell, CellState } from '../models/cell.model';
-import { GameStatus } from '../models/game.model';
+import { Cell, CellState, GameStatus } from '@models';
+import { getRandomNumber } from '@utils';
 import { GameStateService } from './game-state.service';
-import { getRandomNumber } from '../utils/random.util';
 
 //todo add .env file ❗❗❗
 const GRID_SIZE = 100;

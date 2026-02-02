@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, HostListener, Output, EventEmitter, Input } from '@angular/core';
-import { GameWinner } from '../../../core/models/game.model';
+import { GameWinner } from '@models';
 
 @Component({
   selector: 'gridder-modal',

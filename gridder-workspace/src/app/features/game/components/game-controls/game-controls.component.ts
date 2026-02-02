@@ -1,9 +1,8 @@
 import { Component, ChangeDetectionStrategy, inject, computed } from '@angular/core';
-import { GameService } from '../../../../core/services/game.service';
-import { GameStateService } from '../../../../core/services/game-state.service';
-import { GameStatus } from '../../../../core/models/game.model';
-import { normalizeTimeLimit, timeLimitValidator } from '../../../../core/validators/time-limit.validator';
 import { FormsModule } from '@angular/forms';
+import { GameService, GameStateService } from '@services';
+import { normalizeTimeLimit, timeLimitValidator } from '@validators';
+import { GameStatus } from '@models';
 
 //todo add .env file ❗❗❗
 const DEFAULT_TIME_LIMIT = 1000;

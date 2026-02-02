@@ -1,9 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, Input } from '@angular/core';
-import { CellState } from '../../../../core/models/cell.model';
-import { GameStatus } from '../../../../core/models/game.model';
 import { NgClass } from '@angular/common';
-import { GameService } from '../../../../core/services/game.service';
-import { GameStateService } from '../../../../core/services/game-state.service';
+import { CellState, GameStatus } from '@models';
+import { GameService, GameStateService } from '@services';
 
 @Component({
   selector: 'gridder-game-grid-cell',
