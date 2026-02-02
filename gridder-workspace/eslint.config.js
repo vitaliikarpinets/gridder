@@ -31,7 +31,8 @@ module.exports = defineConfig([
           style: "kebab-case",
         },
       ],
-      "@typescript-eslint/consistent-indexed-object-style": "warn"
+      "@typescript-eslint/consistent-indexed-object-style": "warn",
+      "no-console": ["error", { allow: ["error"] }],
     },
   },
   {
