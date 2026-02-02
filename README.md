@@ -22,7 +22,6 @@ npm run serve
 - `npm run serve` - Start the development server
 - `npm run build` - Build for production
 - `npm run watch` - Build with file watching in development mode
-- `npm test` - Run tests
 - `npm run lint` - Lint and fix code style issues
 - `npm run lint:check` - Check code style without fixing
 - `npm run prettier` - Format code with Prettier
