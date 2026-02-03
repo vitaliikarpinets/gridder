@@ -8,6 +8,12 @@ Gridder: Timed Grid Challenge
 - Ensure that your Node.js version is compatible with the Angular version you are using.
 - Check the official Angular documentation for more details on version compatibility.
 
+### Preinstallation
+Ensure that you are in the root directory of the application:
+```bash
+cd gridder-workspace
+```
+
 ### Installation
 ```bash
 npm install
@@ -22,7 +28,6 @@ npm run serve
 - `npm run serve` - Start the development server
 - `npm run build` - Build for production
 - `npm run watch` - Build with file watching in development mode
-- `npm test` - Run tests
 - `npm run lint` - Lint and fix code style issues
 - `npm run lint:check` - Check code style without fixing
 - `npm run prettier` - Format code with Prettier
