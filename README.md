@@ -8,6 +8,12 @@ Gridder: Timed Grid Challenge
 - Ensure that your Node.js version is compatible with the Angular version you are using.
 - Check the official Angular documentation for more details on version compatibility.
 
+### Preinstallation
+Ensure that you are in the root directory of the application:
+```bash
+cd gridder-workspace
+```
+
 ### Installation
 ```bash
 npm install
